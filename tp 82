@@ -1,34 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int sumaElementosParesDivisiblesPor3(const vector<int> & V);
-int main() {
-    vector<int> V;
-    int n;
+void LeerNumeros(vector<int>n);
+int DivisiblesPor3(vector<int>v);
+int main(){
+vector<int>v;
+int n;
+cout>>"ingresa la cantidad de numeros: ";
+cin<<n;
+LeerNumeros(n,v)
+int resultado=int DivisiblesPor3(v);
+cout<<"la suma de los elementos es: "<<resultado<<endl;
+return 0;
 
-    cout << "Ingresa la cantidad de números: ";
-    cin >> n;
-
-    cout << "Ingresa los números:";
-    for (int i = 0; i < n; i++) {
-        int num;
-        cin >> num;
-        V.push_back(num);
-    }
-
-    int resultado = sumaElementosParesDivisiblesPor3(V);
-
-    cout << "La suma de elementos pares en posiciones divisibles por 3 es: " << resultado << endl;
-
-    return 0;
+void LeerNumeros(vector<int>n){
+cout<<"ingresa los numeros: ";
+for(int i=0;i<n;i++){
+int num;
+cin>>num;
+v.push_back(num);
+ }
 }
-
-int sumaElementosParesDivisiblesPor3(const vector<int> & V) {
-    int suma = 0;
-    for (int i = 0; i < V.size(); i++) {
-        if (i % 3 == 0 && V[i] % 2 == 0) {
-            suma += V[i];
-        }
-    }
-    return suma;
+int DivisiblesPor3(vector<int>v){
+int suma=0;
+for(int i=0;i<v.size();i++){
+ if(i%3==0 && v[i]%2==0){
+  suma+=v[i];
+ }
+}
+return suma;
 }
